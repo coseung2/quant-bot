@@ -10,6 +10,19 @@ F 존과 거래량/EMA 신호로 진입하고, 세 슬롯(0.60 / 0.25 / 0.15)으
 
 ---
 
+## 0. AI 에이전트로 세팅
+
+Claude Code, Codex, Cursor 같은 코딩 에이전트를 쓰는 경우, 이 저장소를 열고
+"AGENTS.md 보고 세팅해줘"라고 하면 됩니다.
+
+- `AGENTS.md` — 설치·검증 절차와 안전 규칙
+- `preflight.py` — 읽기 전용 점검(키 존재 여부·Testnet·잔고·포지션 모드)
+
+에이전트도 API 키는 채팅이 아니라 `.env`에 직접 입력하게 되어 있고,
+실거래 전환은 사람의 명시적 승인을 받도록 되어 있습니다.
+
+---
+
 ## 1. 요구사항
 
 - Python **3.11 이상** (검증: 3.12)
@@ -138,6 +151,8 @@ telegram_messages.py       # 메시지 포맷
 telegram_commands.py       # 텔레그램 명령(/mode 등)
 requirements.txt           # 고정 의존성
 .env.example               # 환경변수 예시
+preflight.py               # 읽기 전용 설치 점검
+AGENTS.md                  # AI 에이전트용 설치 절차
 ```
 
 ---
